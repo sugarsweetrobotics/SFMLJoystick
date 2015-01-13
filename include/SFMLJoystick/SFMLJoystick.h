@@ -14,14 +14,15 @@
 #ifndef SFMLJOYSTICK_H
 #define SFMLJOYSTICK_H
 
+#include <rtm/idl/BasicDataTypeSkel.h>
+#include <rtm/idl/ExtendedDataTypesSkel.h>
+#include <rtm/idl/InterfaceDataTypesSkel.h>
+
 #include <rtm/Manager.h>
 #include <rtm/DataFlowComponentBase.h>
 #include <rtm/CorbaPort.h>
 #include <rtm/DataInPort.h>
 #include <rtm/DataOutPort.h>
-#include <rtm/idl/BasicDataTypeSkel.h>
-#include <rtm/idl/ExtendedDataTypesSkel.h>
-#include <rtm/idl/InterfaceDataTypesSkel.h>
 
 // Service implementation headers
 // <rtc-template block="service_impl_h">
@@ -245,6 +246,12 @@ class SFMLJoystick
    */
   int  m_id;
   /*!
+   * Max Value of Axis.
+   * - Name:  axis_max
+   * - DefaultValue: 100
+   */
+  int  m_axis_max;
+  /*!
    * This value defines the output style of buttons OutPort. If
    * this configuration is event, the buttons port sends value
    * only when the button states are changed. If this is
@@ -304,6 +311,7 @@ class SFMLJoystick
   
   // </rtc-template>
 
+  bool m_buttonsBuffer[256];
 };
 
 

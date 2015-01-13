@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rtc:RtcProfile rtc:version="0.2" rtc:id="RTC:Sugar Sweet Robotics:Input:SFMLJoystick:1.0.0" xmlns:rtcExt="http://www.openrtp.org/namespaces/rtc_ext" xmlns:rtcDoc="http://www.openrtp.org/namespaces/rtc_doc" xmlns:rtc="http://www.openrtp.org/namespaces/rtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <rtc:BasicInfo xsi:type="rtcExt:basic_info_ext" rtcExt:saveProject="SFMLJoystick" rtc:updateDate="2015-01-13T09:22:08+09:00" rtc:creationDate="2015-01-13T09:22:08+09:00" rtc:version="1.0.0" rtc:vendor="Sugar Sweet Robotics" rtc:maxInstances="15" rtc:executionType="PeriodicExecutionContext" rtc:executionRate="1000.0" rtc:description="Joystick Component using SFML Library" rtc:category="Input" rtc:componentKind="DataFlowComponent" rtc:activityType="PERIODIC" rtc:componentType="STATIC" rtc:name="SFMLJoystick">
-        <rtcDoc:Doc rtcDoc:reference="" rtcDoc:license="LGPL" rtcDoc:creator="Sugar Sweet Robotics" rtcDoc:algorithm="" rtcDoc:inout="Output: Joystick State." rtcDoc:description="SFML Joystick Component."/>
+        <rtcDoc:Doc rtcDoc:reference="" rtcDoc:license="LGPL" rtcDoc:creator="Sugar Sweet Robotics" rtcDoc:algorithm="" rtcDoc:inout="Output: Joystick State." rtcDoc:description="SFML Joystick Component. Before you build, set SFML_ROOT environment variable to find SFML-2.2 directory."/>
         <rtcExt:VersionUpLogs></rtcExt:VersionUpLogs>
     </rtc:BasicInfo>
     <rtc:Actions>
@@ -25,8 +25,12 @@
             <rtcDoc:Doc rtcDoc:constraint="" rtcDoc:range="" rtcDoc:unit="" rtcDoc:description="If you want to confirm the input value from joystick, set 1." rtcDoc:defaultValue="" rtcDoc:dataname=""/>
             <rtcExt:Properties rtcExt:value="text" rtcExt:name="__widget__"/>
         </rtc:Configuration>
-        <rtc:Configuration xsi:type="rtcExt:configuration_ext" rtcExt:variableName="id" rtc:unit="" rtc:defaultValue="0" rtc:type="int " rtc:name="id">
+        <rtc:Configuration xsi:type="rtcExt:configuration_ext" rtcExt:variableName="id" rtc:unit="" rtc:defaultValue="0" rtc:type="int" rtc:name="id">
             <rtcDoc:Doc rtcDoc:constraint="" rtcDoc:range="" rtcDoc:unit="" rtcDoc:description="ID of Joystick. If you want to use multiple joysticks, use this value." rtcDoc:defaultValue="" rtcDoc:dataname=""/>
+            <rtcExt:Properties rtcExt:value="text" rtcExt:name="__widget__"/>
+        </rtc:Configuration>
+        <rtc:Configuration xsi:type="rtcExt:configuration_ext" rtcExt:variableName="axis_max" rtc:unit="" rtc:defaultValue="100" rtc:type="int" rtc:name="axis_max">
+            <rtcDoc:Doc rtcDoc:constraint="" rtcDoc:range="" rtcDoc:unit="" rtcDoc:description="Max Value of Axis." rtcDoc:defaultValue="" rtcDoc:dataname=""/>
             <rtcExt:Properties rtcExt:value="text" rtcExt:name="__widget__"/>
         </rtc:Configuration>
         <rtc:Configuration xsi:type="rtcExt:configuration_ext" rtcExt:variableName="buttonOutputStyle" rtc:unit="" rtc:defaultValue="event" rtc:type="string" rtc:name="buttonOutputStyle">

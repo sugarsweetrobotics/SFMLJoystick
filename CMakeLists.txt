@@ -54,6 +54,14 @@ else(${OpenRTM_FOUND})
   find_package(OpenRTM REQUIRED)
 endif(${OpenRTM_FOUND})
 
+
+#set(SFML_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/SFML-2.2)
+set(SFML_ROOT $ENV{SFML_ROOT})
+list(APPEND CMAKE_MODULE_PATH ${SFML_ROOT}/cmake/Modules)
+# set(SFML_STATIC_LIBRARIES TRUE)
+find_package(SFML 2 COMPONENTS main window system)
+
+
 # Universal settings
 #enable_testing()
 
