@@ -56,12 +56,15 @@ endif(${OpenRTM_FOUND})
 
 
 #set(SFML_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/SFML-2.2)
+if(WIN32)
 set(SFML_ROOT $ENV{SFML_ROOT})
 list(APPEND CMAKE_MODULE_PATH ${SFML_ROOT}/cmake/Modules)
 # set(SFML_STATIC_LIBRARIES TRUE)
 find_package(SFML 2 COMPONENTS main window system)
-
-
+else(WIN32)
+set(SFML_ROOT /usr/include/SFML)
+set(SFML_LIBRARIES sfml-window sfml-system)
+endif(WIN32)
 # Universal settings
 #enable_testing()
 
