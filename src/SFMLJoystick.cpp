@@ -24,7 +24,7 @@ static const char* sfmljoystick_spec[] =
     "description",       "Joystick Component using SFML Library",
     "version",           "1.0.0",
     "vendor",            "Sugar Sweet Robotics",
-    "category",          "Input",
+    "category",          "HumanInterface",
     "activity_type",     "PERIODIC",
     "kind",              "DataFlowComponent",
     "max_instance",      "15",
