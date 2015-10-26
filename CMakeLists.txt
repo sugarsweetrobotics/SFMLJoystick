@@ -72,6 +72,11 @@ else(WIN32)
 endif(WIN32)
 
 find_package(SFML 2 COMPONENTS system window)
+
+if(WIN32)
+list(APPEND SFML_LIBRARIES winmm.lib)
+endif(WIN32)
+
 # Universal settings
 #enable_testing()
 
