@@ -31,7 +31,7 @@ static const char* sfmljoystick_spec[] =
     "language",          "C++",
     "lang_type",         "compile",
     // Configuration variables
-    "conf.default.debug", "0",
+    "conf.default.debug", "1",
     "conf.default.id", "0",
     "conf.default.axis_max", "100", 
     "conf.default.buttonOutputStyle", "event",
