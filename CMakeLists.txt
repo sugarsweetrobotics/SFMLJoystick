@@ -1,7 +1,12 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 
-cmake_policy(SET CMP0046 NEW)
-cmake_policy(SET CMP0048 NEW)
+if(POLICY CMP0046)
+    cmake_policy(SET CMP0046 OLD)
+endif()
+if(POLICY CMP0048)
+    cmake_policy(SET CMP0048 OLD)
+endif()
+
 
 project(SFMLJoystick)
 string(TOLOWER ${PROJECT_NAME} PROJECT_NAME_LOWER)
